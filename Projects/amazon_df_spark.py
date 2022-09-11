@@ -25,7 +25,7 @@ revenue_range = udf(lambda revenue : 'Over Achieved' if TransactionAmount < 80,0
 
 amazon_DF.withColumn("Total_revenue",revenue_range(amazon_DF.TransactionAmount))
 
-
+amazon_DF.show()
 
 
 ssc.start()
